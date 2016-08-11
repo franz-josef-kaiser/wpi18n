@@ -1,0 +1,26 @@
+{
+	"name"         : "wplang",
+	"version"      : "0.1.0",
+	"description"  : "A dynamic, serverless Composer package builder for WordPress language files",
+	"author"       : {
+		"name"  : "Franz Josef Kaiser",
+		"email" : "wecodemore@gmail.com"
+	},
+	"contributors" : [ ],
+	"license"      : "MIT",
+	"main"         : "index.js",
+	"repository"   : {
+		"type" : "git",
+		"url"  : "https://github.com/wecodemore/wplang.git"
+	},
+	"bugs"         : {
+		"url" : "https://github.com/wecodemore/wplang"
+	},
+	"scripts"      : {
+		"test" : "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies" : {
+		"jszip"      : "^3.1.1",
+		"serverless" : "^1.0.0-alpha.2"
+	}
+}
