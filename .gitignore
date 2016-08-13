@@ -1,2 +1,6 @@
 /.idea
 /node_modules
+
+serverless.env.yaml
+serverless.yaml
+handler.js
