@@ -1,0 +1,1 @@
+web: env VERSION=1 node app.js
