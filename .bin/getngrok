@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+select i in osx win linux freebsd linuxarm q
+do
+    case $i in
+        osx)      os='darwin-amd64';;
+        win)      os='windows-amd64';;
+        linux)    os='linux-amd64';;
+        freebsd)  os='freebsd-amd64';;
+        linuxarm) os='linux-arm';;
+        q) exit;;
+        *) echo 'Invalid option' && exit;;
+    esac
+    break
+done
+
+echo "\n> Selected: ${os}\n"
+
+zip=ngrok-stable-${os}.zip
+url=https://bin.equinox.io/c/4VmDzA7iaHb/${zip}
+
+if command -v curl >/dev/null 2>&1; then
+	curl -O ${url}
+else
+	wget ${url}
+fi
+unzip -o ${zip} -d $(pwd)
+rm ${zip}
